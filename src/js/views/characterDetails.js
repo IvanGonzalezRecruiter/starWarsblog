@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Personaje() {
+export default function CharacterDetails() {
   return (
     <div>
         <div className='row'>
