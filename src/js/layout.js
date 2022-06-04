@@ -31,7 +31,6 @@ const Layout = () => {
 						</Route>
 						
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
@@ -39,3 +38,10 @@ const Layout = () => {
 };
 
 export default injectContext(Layout);
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contac
