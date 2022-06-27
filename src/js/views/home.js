@@ -1,28 +1,44 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../../styles/home.css";
-import Card from "../component/Card";
+import { Cards } from "../component/cards";
 import { Context } from "../store/appContext";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-  console.log(store);
-  //actions.verPersona(id)
+
   return (
-    <div className="mt-5 container">
-      <div className="overflow-x">
-        <h1 className="text-danger">Characters</h1>
-        <div className=" d-flex">
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-          <Card className="col-3" />
-        </div>
+    <div className="container testimonial-group">
+      <div className="row text-center">
+        {store.people.map((item, index) => (
+          <div className="col-sm-6 card-container" key={index}>
+            <Cards
+              url={item.url}
+              indice={index}
+              properties={item.properties}
+              title={item.name}
+              uid={item.uid}
+              charaInfo={true}
+              isFavorite={false}
+            ></Cards>
+          </div>
+        ))}
       </div>
-      <h1 className="text-danger">Planets</h1>
-      <Card />
+
+      <div className="row text-center mt-5">
+        {store.planets.map((item, index) => (
+          <div className="col-sm-6 card-container" key={index}>
+            <Cards
+              url={item.url}
+              indice={index}
+              properties={item.properties}
+              title={item.name}
+              uid={item.uid}
+              planetInfo={true}
+              isFavorite={false}
+            ></Cards>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
