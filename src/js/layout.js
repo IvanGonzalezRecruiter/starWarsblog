@@ -9,8 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import DPeople from "./views/DPeople";
-import DPlanets from "./views/DPlanets";
+import characterDetails from "./views/characterDetails";
+import planetDetails from "./views/planetDetails";
 
 //create your first component
 const Layout = () => {
